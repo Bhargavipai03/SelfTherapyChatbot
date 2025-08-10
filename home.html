@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZenMind - Mental Wellness Companion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #5b21b6;
+      --primary-dark: #3b0764;
+      --bg: #0f172a;
+      --surface: #1e1b4b;
+      --text: #e0e7ff;
+      --muted: #a5b4fc;
+      --radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Manrope', 'Inter', sans-serif;
+      background: radial-gradient(circle at center, #312e81 0%, #0f172a 100%);
+      background-attachment: fixed;
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    svg.blob-bg, svg.blob-bg2 {
+      position: absolute;
+      z-index: 0;
+      opacity: 0.07;
+    }
+
+    svg.blob-bg {
+      top: -200px;
+      left: -200px;
+      transform: scale(1.5);
+      animation: float 10s ease-in-out infinite;
+    }
+
+    svg.blob-bg2 {
+      bottom: -200px;
+      right: -200px;
+      transform: scale(1.5);
+      animation: float 14s ease-in-out infinite reverse;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px) scale(1.5); }
+      50% { transform: translateY(30px) scale(1.5); }
+      100% { transform: translateY(0px) scale(1.5); }
+    }
+
+    .container {
+      width: 100%;
+      max-width: 700px;
+      background-color: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      padding: 40px;
+    }
+
+    .header {
+      font-size: 2rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 24px;
+    }
+
+    .section h2 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .section p {
+      margin-bottom: 32px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    button {
+      background: linear-gradient(to right, var(--primary), var(--primary-dark));
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin: 0 10px;
+    }
+
+    button:hover {
+      opacity: 0.95;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding-top: 24px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <svg class="blob-bg" width="800" height="800" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#7c3aed" d="M400,300Q370,350,330,370Q290,390,250,360Q210,330,190,290Q170,250,200,210Q230,170,270,180Q310,190,350,210Q390,230,400,300Z"/>
+  </svg>
+  <svg class="blob-bg2" width="800" height="800" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#7c3aed" d="M420,310Q390,370,340,390Q290,410,250,380Q210,350,180,310Q150,270,180,230Q210,190,260,180Q310,170,360,190Q410,210,420,310Z"/>
+  </svg>
+  <div class="container">
+    <div class="header">Megatron</div>
+    <div class="section">
+      <h2>Welcome to Your Wellness Space</h2>
+      <p>Megatron, is your AI-powered companion designed to help you manage stress, anxiety, and everyday mental wellness. Speak freely, reflect deeply, and feel supported every step of the way.</p>
+      <div>
+        <a href="signup.html"><button>Get Started</button></a>
+        <a href="trial4.html"><button>Start Chat</button></a>
+      </div>
+    </div>
+    <div class="footer">&copy; 2025 Megatron. You're not alone.</div>
+  </div>
+</body>
+</html>
